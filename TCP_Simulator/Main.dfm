@@ -33,6 +33,78 @@ object FormMain: TFormMain
       Index = 0
     end
   end
+  object __________pnBase: TPanel
+    Left = 0
+    Top = 124
+    Width = 1402
+    Height = 830
+    Align = alClient
+    BevelOuter = bvNone
+    Color = 3947580
+    ParentBackground = False
+    TabOrder = 5
+    ExplicitLeft = 120
+    ExplicitTop = 280
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object Notebook_Main: TNotebook
+      Left = 0
+      Top = 0
+      Width = 1402
+      Height = 830
+      Align = alClient
+      TabOrder = 0
+      ExplicitLeft = 248
+      ExplicitTop = 208
+      ExplicitWidth = 150
+      ExplicitHeight = 150
+      object TPage
+        Left = 0
+        Top = 0
+        Caption = 'SERVER'
+        ExplicitWidth = 150
+        ExplicitHeight = 150
+        object _____pnBase_00_SERVER: TPanel
+          Left = 0
+          Top = 0
+          Width = 1402
+          Height = 830
+          Align = alClient
+          BevelOuter = bvNone
+          Color = 3947580
+          ParentBackground = False
+          TabOrder = 0
+          ExplicitLeft = 928
+          ExplicitTop = 416
+          ExplicitWidth = 185
+          ExplicitHeight = 41
+        end
+      end
+      object TPage
+        Left = 0
+        Top = 0
+        HelpContext = 1
+        Caption = 'CLIENT'
+        ExplicitWidth = 0
+        ExplicitHeight = 0
+        object _____pnBase_01_CLIENT: TPanel
+          Left = 0
+          Top = 0
+          Width = 1402
+          Height = 830
+          Align = alClient
+          BevelOuter = bvNone
+          Color = 3947580
+          ParentBackground = False
+          TabOrder = 0
+          ExplicitLeft = 160
+          ExplicitTop = 144
+          ExplicitWidth = 185
+          ExplicitHeight = 41
+        end
+      end
+    end
+  end
   object BarMgr: TdxBarManager
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -61,11 +133,11 @@ object FormMain: TFormMain
       ItemLinks = <
         item
           Visible = True
-          ItemName = 'dxBarLargeButton1'
+          ItemName = 'MenuBtn_00_SERVER'
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButton2'
+          ItemName = 'MenuBtn_00_CLIENT'
         end>
       OneOnRow = True
       Row = 0
@@ -73,11 +145,12 @@ object FormMain: TFormMain
       Visible = True
       WholeRow = False
     end
-    object dxBarLargeButton1: TdxBarLargeButton
+    object MenuBtn_00_SERVER: TdxBarLargeButton
       Caption = 'SERVER'
       Category = 0
       Hint = 'SERVER'
       Visible = ivAlways
+      OnClick = ClickMenuButton
       HotGlyph.SourceDPI = 96
       HotGlyph.Data = {
         89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
@@ -113,11 +186,13 @@ object FormMain: TFormMain
         524DE8252D4085596B325EC9A36F864A6550734F4A5A80238667331933B30494
         7A535FC2D4DFF25480BF0001550276A15A27EB0000000049454E44AE426082}
     end
-    object dxBarLargeButton2: TdxBarLargeButton
+    object MenuBtn_00_CLIENT: TdxBarLargeButton
+      Tag = 1
       Caption = 'CLIENT'
       Category = 0
       Hint = 'CLIENT'
       Visible = ivAlways
+      OnClick = ClickMenuButton
       HotGlyph.SourceDPI = 96
       HotGlyph.Data = {
         89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A

@@ -75,6 +75,7 @@
 #include "dxSkinWhiteprint.hpp"
 #include "dxSkinWXI.hpp"
 #include "dxSkinXmas2008Blue.hpp"
+#include <Vcl.ExtCtrls.hpp>
 //---------------------------------------------------------------------------
 class TFormMain : public TForm
 {
@@ -83,8 +84,13 @@ __published:	// IDE-managed Components
 	TdxRibbon *dxRibbon1;
 	TdxBarManager *BarMgr;
 	TdxBar *BarMgrBar1;
-	TdxBarLargeButton *dxBarLargeButton1;
-	TdxBarLargeButton *dxBarLargeButton2;
+	TdxBarLargeButton *MenuBtn_00_SERVER;
+	TdxBarLargeButton *MenuBtn_00_CLIENT;
+	TPanel *__________pnBase;
+	TNotebook *Notebook_Main;
+	TPanel *_____pnBase_00_SERVER;
+	TPanel *_____pnBase_01_CLIENT;
+	void __fastcall ClickMenuButton(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormMain(TComponent* Owner);

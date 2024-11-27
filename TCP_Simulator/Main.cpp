@@ -82,3 +82,11 @@ __fastcall TFormMain::TFormMain(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
+void __fastcall TFormMain::ClickMenuButton(TObject *Sender)
+{
+	TdxBarLargeButton* p_Btn = (TdxBarLargeButton*)Sender;
+	int t_Tag = p_Btn->Tag;
+
+    Notebook_Main->PageIndex = t_Tag;
+}
+//---------------------------------------------------------------------------
