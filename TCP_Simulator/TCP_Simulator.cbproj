@@ -88,7 +88,7 @@
         <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
         <ProjectType>CppVCLApplication</ProjectType>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
-        <AllPackageLibs>rtl.lib;vcl.lib;dxCoreRS29.lib;cxLibraryRS29.lib;dxGDIPlusRS29.lib;dbexpress.lib;DbxCommonDriver.lib;dbrtl.lib;vclwinx.lib;vclimg.lib;bindengine.lib;vcldb.lib;vclie.lib;vcledge.lib;vclx.lib;dxBarRS29.lib;dxComnRS29.lib;dxRibbonRS29.lib;dxRibbonCustomizationFormRS29.lib;cxTreeListRS29.lib;cxExportRS29.lib;dxSpreadSheetCoreRS29.lib;dxSpreadSheetRS29.lib;xmlrtl.lib</AllPackageLibs>
+        <AllPackageLibs>rtl.lib;vcl.lib;dxCoreRS29.lib;cxLibraryRS29.lib;dxGDIPlusRS29.lib;dbexpress.lib;DbxCommonDriver.lib;dbrtl.lib;vclwinx.lib;vclimg.lib;bindengine.lib;vcldb.lib;vclie.lib;vcledge.lib;vclx.lib;dxBarRS29.lib;dxComnRS29.lib;dxRibbonRS29.lib;dxRibbonCustomizationFormRS29.lib;cxTreeListRS29.lib;cxExportRS29.lib;dxSpreadSheetCoreRS29.lib;dxSpreadSheetRS29.lib;xmlrtl.lib;dxSkinsCoreRS29.lib</AllPackageLibs>
         <_TCHARMapping>wchar_t</_TCHARMapping>
         <Multithreaded>true</Multithreaded>
         <Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
@@ -152,9 +152,13 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-        <LinkPackageImports>rtl.bpi;vcl.bpi;dxCoreRS29.bpi;cxLibraryRS29.bpi;dxGDIPlusRS29.bpi;dbexpress.bpi;DbxCommonDriver.bpi;dbrtl.bpi;vclwinx.bpi;vclimg.bpi;bindengine.bpi;vcldb.bpi;vclie.bpi;vcledge.bpi;vclx.bpi;dxBarRS29.bpi;dxComnRS29.bpi;dxRibbonRS29.bpi;dxRibbonCustomizationFormRS29.bpi;cxTreeListRS29.bpi;cxExportRS29.bpi;dxSpreadSheetCoreRS29.bpi;dxSpreadSheetRS29.bpi;xmlrtl.bpi</LinkPackageImports>
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
         <ILINK_LibraryPath>$(BDSLIB)\$(PLATFORM)$(CC_SUFFIX)\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <UsePackages>false</UsePackages>
+        <DynamicRTL>false</DynamicRTL>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <LinkPackageStatics>rtl.lib;vcl.lib;dxCoreRS29.lib;cxLibraryRS29.lib;dxGDIPlusRS29.lib;dbexpress.lib;DbxCommonDriver.lib;dbrtl.lib;vclwinx.lib;vclimg.lib;bindengine.lib;vcldb.lib;vclie.lib;vcledge.lib;vclx.lib;dxBarRS29.lib;dxComnRS29.lib;dxRibbonRS29.lib;dxRibbonCustomizationFormRS29.lib;cxTreeListRS29.lib;cxExportRS29.lib;dxSpreadSheetCoreRS29.lib;dxSpreadSheetRS29.lib;xmlrtl.lib;dxSkinsCoreRS29.lib</LinkPackageStatics>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
@@ -217,6 +221,10 @@
                 <Source>
                     <Source Name="MainSource">TCP_Simulator.cpp</Source>
                 </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k290.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp290.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+                </Excluded_Packages>
             </CPlusPlusBuilder.Personality>
             <Deployment Version="4">
                 <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx32\libcgcrtl.dylib" Class="DependencyModule">

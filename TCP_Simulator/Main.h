@@ -76,6 +76,7 @@
 #include "dxSkinWXI.hpp"
 #include "dxSkinXmas2008Blue.hpp"
 #include <Vcl.ExtCtrls.hpp>
+#include "dxSkinsLookAndFeelPainter.hpp"
 //---------------------------------------------------------------------------
 class TFormMain : public TForm
 {
