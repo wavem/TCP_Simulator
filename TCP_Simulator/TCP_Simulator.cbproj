@@ -159,6 +159,7 @@
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <LinkPackageStatics>rtl.lib;vcl.lib;dxCoreRS29.lib;cxLibraryRS29.lib;dxGDIPlusRS29.lib;dbexpress.lib;DbxCommonDriver.lib;dbrtl.lib;vclwinx.lib;vclimg.lib;bindengine.lib;vcldb.lib;vclie.lib;vcledge.lib;vclx.lib;dxBarRS29.lib;dxComnRS29.lib;dxRibbonRS29.lib;dxRibbonCustomizationFormRS29.lib;cxTreeListRS29.lib;cxExportRS29.lib;dxSpreadSheetCoreRS29.lib;dxSpreadSheetRS29.lib;xmlrtl.lib;dxSkinsCoreRS29.lib</LinkPackageStatics>
+        <IncludePath>$(PROJECTDIR)include_cpp;$(IncludePath)</IncludePath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
