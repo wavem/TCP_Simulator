@@ -79,6 +79,14 @@
 #include "dxSkinXmas2008Blue.hpp"
 #include <Vcl.ExtCtrls.hpp>
 #include "dxSkinsLookAndFeelPainter.hpp"
+#include "AdvGrid.hpp"
+#include "AdvObj.hpp"
+#include "AdvToggle.hpp"
+#include "AdvUtil.hpp"
+#include "BaseGrid.hpp"
+#include "cxButtons.hpp"
+#include <Vcl.Grids.hpp>
+#include <Vcl.Menus.hpp>
 //---------------------------------------------------------------------------
 class TFormMain : public TForm
 {
@@ -93,6 +101,24 @@ __published:	// IDE-managed Components
 	TNotebook *Notebook_Main;
 	TPanel *_____pnBase_00_SERVER;
 	TPanel *_____pnBase_01_CLIENT;
+	TPanel *__pnBase_Send_01_Content;
+	TLabel *lb_Send_Title_ProtocolName;
+	TLabel *lb_Send_ProtocolName;
+	TLabel *lb_Send_Title_AutoSend;
+	TcxButton *btn_Send_BackToList;
+	TAdvStringGrid *grid_Send_Protocol;
+	TcxButton *btn_Send;
+	TAdvToggleSwitch *Toggle_Send_Auto;
+	TPanel *__pnBase_Recv_01_Content;
+	TLabel *lb_Recv_Title_ProtocolName;
+	TLabel *lb_Recv_ProtocolName;
+	TLabel *Toggle_Recv_Auto;
+	TcxButton *btn_Recv_BackToList;
+	TAdvStringGrid *grid_Recv_Protocol;
+	TAdvToggleSwitch *AdvToggleSwitch2;
+	TMemo *Log_Send;
+	TMemo *memo;
+	TMemo *Log_Recv;
 	void __fastcall ClickMenuButton(TObject *Sender);
 private:	// User declarations
 public:		// User declarations

@@ -2,8 +2,8 @@ object FormMain: TFormMain
   Left = 0
   Top = 0
   Caption = 'FormMain'
-  ClientHeight = 954
-  ClientWidth = 1402
+  ClientHeight = 932
+  ClientWidth = 1637
   Color = clBtnFace
   DoubleBuffered = True
   Font.Charset = DEFAULT_CHARSET
@@ -16,13 +16,14 @@ object FormMain: TFormMain
   object dxRibbon1: TdxRibbon
     Left = 0
     Top = 0
-    Width = 1402
+    Width = 1637
     Height = 124
     BarManager = BarMgr
     ColorSchemeName = 'DevExpressDarkStyle'
     Contexts = <>
     TabOrder = 0
     TabStop = False
+    ExplicitWidth = 1402
     object dxRibbon1Tab1: TdxRibbonTab
       Active = True
       Caption = 'MENU'
@@ -36,48 +37,43 @@ object FormMain: TFormMain
   object __________pnBase: TPanel
     Left = 0
     Top = 124
-    Width = 1402
-    Height = 830
+    Width = 1637
+    Height = 808
     Align = alClient
     BevelOuter = bvNone
     Color = 3947580
     ParentBackground = False
     TabOrder = 5
-    ExplicitLeft = 120
-    ExplicitTop = 280
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 1402
+    ExplicitHeight = 830
     object Notebook_Main: TNotebook
       Left = 0
       Top = 0
-      Width = 1402
-      Height = 830
+      Width = 1637
+      Height = 808
       Align = alClient
+      PageIndex = 1
       TabOrder = 0
-      ExplicitLeft = 248
-      ExplicitTop = 208
-      ExplicitWidth = 150
-      ExplicitHeight = 150
+      ExplicitWidth = 1402
+      ExplicitHeight = 830
       object TPage
         Left = 0
         Top = 0
         Caption = 'SERVER'
-        ExplicitWidth = 150
-        ExplicitHeight = 150
+        ExplicitWidth = 1402
+        ExplicitHeight = 830
         object _____pnBase_00_SERVER: TPanel
           Left = 0
           Top = 0
-          Width = 1402
-          Height = 830
+          Width = 1637
+          Height = 808
           Align = alClient
           BevelOuter = bvNone
           Color = 3947580
           ParentBackground = False
           TabOrder = 0
-          ExplicitLeft = 928
-          ExplicitTop = 416
-          ExplicitWidth = 185
-          ExplicitHeight = 41
+          ExplicitWidth = 1402
+          ExplicitHeight = 830
         end
       end
       object TPage
@@ -85,22 +81,702 @@ object FormMain: TFormMain
         Top = 0
         HelpContext = 1
         Caption = 'CLIENT'
-        ExplicitWidth = 0
-        ExplicitHeight = 0
+        ExplicitWidth = 1402
+        ExplicitHeight = 830
         object _____pnBase_01_CLIENT: TPanel
           Left = 0
           Top = 0
-          Width = 1402
-          Height = 830
+          Width = 1637
+          Height = 808
           Align = alClient
           BevelOuter = bvNone
           Color = 3947580
           ParentBackground = False
           TabOrder = 0
-          ExplicitLeft = 160
-          ExplicitTop = 144
-          ExplicitWidth = 185
-          ExplicitHeight = 41
+          ExplicitWidth = 1402
+          ExplicitHeight = 830
+          object __pnBase_Send_01_Content: TPanel
+            Left = 8
+            Top = 6
+            Width = 800
+            Height = 600
+            BevelOuter = bvNone
+            Color = 2894892
+            ParentBackground = False
+            TabOrder = 0
+            object lb_Send_Title_ProtocolName: TLabel
+              Left = 24
+              Top = 16
+              Width = 133
+              Height = 20
+              Caption = 'PROTOCOL NAME :'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Height = -15
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object lb_Send_ProtocolName: TLabel
+              Left = 162
+              Top = 16
+              Width = 54
+              Height = 20
+              Caption = 'Caption'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Height = -15
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object lb_Send_Title_AutoSend: TLabel
+              Left = 538
+              Top = 28
+              Width = 49
+              Height = 20
+              Caption = 'AUTO :'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Height = -15
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object btn_Send_BackToList: TcxButton
+              Left = 728
+              Top = 16
+              Width = 57
+              Height = 49
+              Caption = 'btn_Send_BackToList'
+              LookAndFeel.NativeStyle = False
+              LookAndFeel.SkinName = 'DevExpressDarkStyle'
+              OptionsImage.Glyph.SourceDPI = 96
+              OptionsImage.Glyph.Data = {
+                3C3F786D6C2076657273696F6E3D22312E302220656E636F64696E673D225554
+                462D38223F3E0D0A3C7376672076657273696F6E3D22312E31222069643D224C
+                61796572312220786D6C6E733D22687474703A2F2F7777772E77332E6F72672F
+                323030302F7376672220786D6C6E733A786C696E6B3D22687474703A2F2F7777
+                772E77332E6F72672F313939392F786C696E6B2220783D223070782220793D22
+                307078222076696577426F783D2230203020333220333222207374796C653D22
+                656E61626C652D6261636B67726F756E643A6E6577203020302033322033323B
+                2220786D6C3A73706163653D227072657365727665223E262331333B26233130
+                3B20203C7374796C6520747970653D22746578742F6373732220786D6C3A7370
+                6163653D227072657365727665223E2E426C61636B262331333B262331303B20
+                2020207B262331333B262331303B20202020202066696C6C3A23373237323732
+                3B262331333B262331303B202020202020666F6E742D66616D696C793A266170
+                6F733B64782D666F6E742D69636F6E732661706F733B3B262331333B26233130
+                3B202020202020666F6E742D73697A653A333270783B262331333B262331303B
+                202020207D262331333B262331303B20203C2F7374796C653E0D0A3C74657874
+                20783D22302220793D2233322220636C6173733D22426C61636B223EEF83953C
+                2F746578743E0D0A3C2F7376673E0D0A}
+              OptionsImage.Layout = blGlyphTop
+              PaintStyle = bpsGlyph
+              TabOrder = 0
+            end
+            object grid_Send_Protocol: TAdvStringGrid
+              Left = 24
+              Top = 80
+              Width = 753
+              Height = 497
+              ColCount = 9
+              Ctl3D = True
+              DefaultRowHeight = 44
+              DrawingStyle = gdsClassic
+              FixedColor = clWhite
+              RowCount = 31
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -12
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goFixedRowDefAlign]
+              ParentCtl3D = False
+              ParentFont = False
+              TabOrder = 1
+              ActiveRowColor = 4429536
+              GridLineColor = 13948116
+              GridFixedLineColor = 11250603
+              ActiveCellFont.Charset = DEFAULT_CHARSET
+              ActiveCellFont.Color = 4474440
+              ActiveCellFont.Height = -12
+              ActiveCellFont.Name = 'Segoe UI'
+              ActiveCellFont.Style = [fsBold]
+              ActiveCellColor = 11565130
+              ActiveCellColorTo = 11565130
+              BorderColor = 11250603
+              ColumnHeaders.Strings = (
+                'BYTE'
+                'Bit 7'
+                'Bit 6'
+                'Bit 5'
+                'Bit 4'
+                'Bit 3'
+                'Bit 2'
+                'Bit 1'
+                'Bit 0')
+              ControlLook.FixedGradientFrom = clWhite
+              ControlLook.FixedGradientTo = clWhite
+              ControlLook.FixedGradientHoverFrom = clGray
+              ControlLook.FixedGradientHoverTo = clWhite
+              ControlLook.FixedGradientHoverMirrorFrom = clWhite
+              ControlLook.FixedGradientHoverMirrorTo = clWhite
+              ControlLook.FixedGradientHoverBorder = 11645361
+              ControlLook.FixedGradientDownFrom = clWhite
+              ControlLook.FixedGradientDownTo = clWhite
+              ControlLook.FixedGradientDownMirrorFrom = clWhite
+              ControlLook.FixedGradientDownMirrorTo = clWhite
+              ControlLook.FixedGradientDownBorder = 11250603
+              ControlLook.DropDownHeader.Font.Charset = DEFAULT_CHARSET
+              ControlLook.DropDownHeader.Font.Color = clWindowText
+              ControlLook.DropDownHeader.Font.Height = -11
+              ControlLook.DropDownHeader.Font.Name = 'Segoe UI'
+              ControlLook.DropDownHeader.Font.Style = []
+              ControlLook.DropDownHeader.Visible = True
+              ControlLook.DropDownHeader.Buttons = <>
+              ControlLook.DropDownFooter.Font.Charset = DEFAULT_CHARSET
+              ControlLook.DropDownFooter.Font.Color = clWindowText
+              ControlLook.DropDownFooter.Font.Height = -11
+              ControlLook.DropDownFooter.Font.Name = 'Segoe UI'
+              ControlLook.DropDownFooter.Font.Style = []
+              ControlLook.DropDownFooter.Visible = True
+              ControlLook.DropDownFooter.Buttons = <>
+              ControlLook.ToggleSwitch.BackgroundBorderWidth = 1.000000000000000000
+              ControlLook.ToggleSwitch.ButtonBorderWidth = 1.000000000000000000
+              ControlLook.ToggleSwitch.CaptionFont.Charset = DEFAULT_CHARSET
+              ControlLook.ToggleSwitch.CaptionFont.Color = clWindowText
+              ControlLook.ToggleSwitch.CaptionFont.Height = -12
+              ControlLook.ToggleSwitch.CaptionFont.Name = 'Segoe UI'
+              ControlLook.ToggleSwitch.CaptionFont.Style = []
+              ControlLook.ToggleSwitch.Shadow = False
+              DefaultAlignment = taCenter
+              Filter = <>
+              FilterDropDown.Font.Charset = DEFAULT_CHARSET
+              FilterDropDown.Font.Color = clWindowText
+              FilterDropDown.Font.Height = -12
+              FilterDropDown.Font.Name = 'Segoe UI'
+              FilterDropDown.Font.Style = []
+              FilterDropDown.TextChecked = 'Checked'
+              FilterDropDown.TextUnChecked = 'Unchecked'
+              FilterDropDownClear = '(All)'
+              FilterEdit.TypeNames.Strings = (
+                'Starts with'
+                'Ends with'
+                'Contains'
+                'Not contains'
+                'Equal'
+                'Not equal'
+                'Larger than'
+                'Smaller than'
+                'Clear')
+              FixedColWidth = 40
+              FixedRowHeight = 22
+              FixedFont.Charset = DEFAULT_CHARSET
+              FixedFont.Color = clWindowText
+              FixedFont.Height = -11
+              FixedFont.Name = 'Segoe UI'
+              FixedFont.Style = [fsBold]
+              FloatFormat = '%.2f'
+              HoverButtons.Buttons = <>
+              HTMLSettings.ImageFolder = 'images'
+              HTMLSettings.ImageBaseName = 'img'
+              IntelliZoom = False
+              Look = glCustom
+              MouseActions.WheelActive = waMouseOver
+              PrintSettings.DateFormat = 'dd/mm/yyyy'
+              PrintSettings.Font.Charset = DEFAULT_CHARSET
+              PrintSettings.Font.Color = clWindowText
+              PrintSettings.Font.Height = -12
+              PrintSettings.Font.Name = 'Segoe UI'
+              PrintSettings.Font.Style = []
+              PrintSettings.FixedFont.Charset = DEFAULT_CHARSET
+              PrintSettings.FixedFont.Color = clWindowText
+              PrintSettings.FixedFont.Height = -12
+              PrintSettings.FixedFont.Name = 'Segoe UI'
+              PrintSettings.FixedFont.Style = []
+              PrintSettings.HeaderFont.Charset = DEFAULT_CHARSET
+              PrintSettings.HeaderFont.Color = clWindowText
+              PrintSettings.HeaderFont.Height = -12
+              PrintSettings.HeaderFont.Name = 'Segoe UI'
+              PrintSettings.HeaderFont.Style = []
+              PrintSettings.FooterFont.Charset = DEFAULT_CHARSET
+              PrintSettings.FooterFont.Color = clWindowText
+              PrintSettings.FooterFont.Height = -12
+              PrintSettings.FooterFont.Name = 'Segoe UI'
+              PrintSettings.FooterFont.Style = []
+              PrintSettings.PageNumSep = '/'
+              ScrollBarAlways = saVert
+              ScrollSynch = True
+              SearchFooter.ColorTo = clNone
+              SearchFooter.FindNextCaption = 'Find &next'
+              SearchFooter.FindPrevCaption = 'Find &previous'
+              SearchFooter.Font.Charset = DEFAULT_CHARSET
+              SearchFooter.Font.Color = clWindowText
+              SearchFooter.Font.Height = -12
+              SearchFooter.Font.Name = 'Segoe UI'
+              SearchFooter.Font.Style = []
+              SearchFooter.HighLightCaption = 'Highlight'
+              SearchFooter.HintClose = 'Close'
+              SearchFooter.HintFindNext = 'Find next occurrence'
+              SearchFooter.HintFindPrev = 'Find previous occurrence'
+              SearchFooter.HintHighlight = 'Highlight occurrences'
+              SearchFooter.MatchCaseCaption = 'Match case'
+              SearchFooter.ResultFormat = '(%d of %d)'
+              SelectionColor = 13744549
+              SelectionTextColor = clWindowText
+              ShowSelection = False
+              SortSettings.HeaderColor = clWhite
+              SortSettings.HeaderColorTo = clWhite
+              SortSettings.HeaderMirrorColor = clWhite
+              SortSettings.HeaderMirrorColorTo = clWhite
+              VAlignment = vtaCenter
+              Version = '9.0.0.10'
+              ColWidths = (
+                40
+                87
+                87
+                87
+                86
+                87
+                87
+                87
+                84)
+              RowHeights = (
+                22
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44)
+            end
+            object btn_Send: TcxButton
+              Left = 665
+              Top = 16
+              Width = 57
+              Height = 49
+              Caption = 'btn_Send_BackToList'
+              LookAndFeel.NativeStyle = False
+              LookAndFeel.SkinName = 'DevExpressDarkStyle'
+              OptionsImage.Glyph.SourceDPI = 96
+              OptionsImage.Glyph.Data = {
+                3C3F786D6C2076657273696F6E3D22312E302220656E636F64696E673D225554
+                462D38223F3E0D0A3C7376672076657273696F6E3D22312E31222069643D224C
+                61796572312220786D6C6E733D22687474703A2F2F7777772E77332E6F72672F
+                323030302F7376672220786D6C6E733A786C696E6B3D22687474703A2F2F7777
+                772E77332E6F72672F313939392F786C696E6B2220783D223070782220793D22
+                307078222076696577426F783D2230203020333220333222207374796C653D22
+                656E61626C652D6261636B67726F756E643A6E6577203020302033322033323B
+                2220786D6C3A73706163653D227072657365727665223E262331333B26233130
+                3B20203C7374796C6520747970653D22746578742F6373732220786D6C3A7370
+                6163653D227072657365727665223E2E426C61636B262331333B262331303B20
+                2020207B262331333B262331303B20202020202066696C6C3A23373237323732
+                3B262331333B262331303B202020202020666F6E742D66616D696C793A266170
+                6F733B64782D666F6E742D69636F6E732661706F733B3B262331333B26233130
+                3B202020202020666F6E742D73697A653A333270783B262331333B262331303B
+                202020207D262331333B262331303B20203C2F7374796C653E0D0A3C74657874
+                20783D22302220793D2233322220636C6173733D22426C61636B223EEEA29C3C
+                2F746578743E0D0A3C2F7376673E0D0A}
+              OptionsImage.Layout = blGlyphTop
+              PaintStyle = bpsGlyph
+              TabOrder = 2
+            end
+            object Toggle_Send_Auto: TAdvToggleSwitch
+              Left = 593
+              Top = 24
+              Width = 60
+              Height = 32
+              Animated = True
+              BackgroundBorderWidth = 1.000000000000000000
+              ButtonOnBorder = clBlack
+              ButtonOffBorder = clBlack
+              On = False
+              TabOrder = 3
+              Version = '1.0.0.1'
+            end
+          end
+          object __pnBase_Recv_01_Content: TPanel
+            Left = 824
+            Top = 6
+            Width = 800
+            Height = 600
+            BevelOuter = bvNone
+            Color = 2894892
+            ParentBackground = False
+            TabOrder = 1
+            object lb_Recv_Title_ProtocolName: TLabel
+              Left = 24
+              Top = 16
+              Width = 133
+              Height = 20
+              Caption = 'PROTOCOL NAME :'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Height = -15
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object lb_Recv_ProtocolName: TLabel
+              Left = 162
+              Top = 16
+              Width = 54
+              Height = 20
+              Caption = 'Caption'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Height = -15
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object Toggle_Recv_Auto: TLabel
+              Left = 480
+              Top = 28
+              Width = 107
+              Height = 20
+              Caption = 'AUTO REPEAT :'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWhite
+              Font.Height = -15
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              ParentFont = False
+              Visible = False
+            end
+            object btn_Recv_BackToList: TcxButton
+              Left = 728
+              Top = 16
+              Width = 57
+              Height = 49
+              Caption = 'btn_Send_BackToList'
+              LookAndFeel.NativeStyle = False
+              LookAndFeel.SkinName = 'DevExpressDarkStyle'
+              OptionsImage.Glyph.SourceDPI = 96
+              OptionsImage.Glyph.Data = {
+                3C3F786D6C2076657273696F6E3D22312E302220656E636F64696E673D225554
+                462D38223F3E0D0A3C7376672076657273696F6E3D22312E31222069643D224C
+                61796572312220786D6C6E733D22687474703A2F2F7777772E77332E6F72672F
+                323030302F7376672220786D6C6E733A786C696E6B3D22687474703A2F2F7777
+                772E77332E6F72672F313939392F786C696E6B2220783D223070782220793D22
+                307078222076696577426F783D2230203020333220333222207374796C653D22
+                656E61626C652D6261636B67726F756E643A6E6577203020302033322033323B
+                2220786D6C3A73706163653D227072657365727665223E262331333B26233130
+                3B20203C7374796C6520747970653D22746578742F6373732220786D6C3A7370
+                6163653D227072657365727665223E2E426C61636B262331333B262331303B20
+                2020207B262331333B262331303B20202020202066696C6C3A23373237323732
+                3B262331333B262331303B202020202020666F6E742D66616D696C793A266170
+                6F733B64782D666F6E742D69636F6E732661706F733B3B262331333B26233130
+                3B202020202020666F6E742D73697A653A333270783B262331333B262331303B
+                202020207D262331333B262331303B20203C2F7374796C653E0D0A3C74657874
+                20783D22302220793D2233322220636C6173733D22426C61636B223EEF83953C
+                2F746578743E0D0A3C2F7376673E0D0A}
+              OptionsImage.Layout = blGlyphTop
+              PaintStyle = bpsGlyph
+              TabOrder = 0
+            end
+            object grid_Recv_Protocol: TAdvStringGrid
+              Left = 24
+              Top = 80
+              Width = 753
+              Height = 497
+              ColCount = 9
+              Ctl3D = True
+              DefaultRowHeight = 44
+              DrawingStyle = gdsClassic
+              FixedColor = clWhite
+              RowCount = 31
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -12
+              Font.Name = 'Segoe UI'
+              Font.Style = []
+              Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goFixedRowDefAlign]
+              ParentCtl3D = False
+              ParentFont = False
+              TabOrder = 1
+              ActiveRowColor = 4429536
+              GridLineColor = 13948116
+              GridFixedLineColor = 11250603
+              ActiveCellFont.Charset = DEFAULT_CHARSET
+              ActiveCellFont.Color = 4474440
+              ActiveCellFont.Height = -12
+              ActiveCellFont.Name = 'Segoe UI'
+              ActiveCellFont.Style = [fsBold]
+              ActiveCellColor = 11565130
+              ActiveCellColorTo = 11565130
+              BorderColor = 11250603
+              ColumnHeaders.Strings = (
+                'BYTE'
+                'Bit 7'
+                'Bit 6'
+                'Bit 5'
+                'Bit 4'
+                'Bit 3'
+                'Bit 2'
+                'Bit 1'
+                'Bit 0')
+              ControlLook.FixedGradientFrom = clWhite
+              ControlLook.FixedGradientTo = clWhite
+              ControlLook.FixedGradientHoverFrom = clGray
+              ControlLook.FixedGradientHoverTo = clWhite
+              ControlLook.FixedGradientHoverMirrorFrom = clWhite
+              ControlLook.FixedGradientHoverMirrorTo = clWhite
+              ControlLook.FixedGradientHoverBorder = 11645361
+              ControlLook.FixedGradientDownFrom = clWhite
+              ControlLook.FixedGradientDownTo = clWhite
+              ControlLook.FixedGradientDownMirrorFrom = clWhite
+              ControlLook.FixedGradientDownMirrorTo = clWhite
+              ControlLook.FixedGradientDownBorder = 11250603
+              ControlLook.DropDownHeader.Font.Charset = DEFAULT_CHARSET
+              ControlLook.DropDownHeader.Font.Color = clWindowText
+              ControlLook.DropDownHeader.Font.Height = -11
+              ControlLook.DropDownHeader.Font.Name = 'Segoe UI'
+              ControlLook.DropDownHeader.Font.Style = []
+              ControlLook.DropDownHeader.Visible = True
+              ControlLook.DropDownHeader.Buttons = <>
+              ControlLook.DropDownFooter.Font.Charset = DEFAULT_CHARSET
+              ControlLook.DropDownFooter.Font.Color = clWindowText
+              ControlLook.DropDownFooter.Font.Height = -11
+              ControlLook.DropDownFooter.Font.Name = 'Segoe UI'
+              ControlLook.DropDownFooter.Font.Style = []
+              ControlLook.DropDownFooter.Visible = True
+              ControlLook.DropDownFooter.Buttons = <>
+              ControlLook.ToggleSwitch.BackgroundBorderWidth = 1.000000000000000000
+              ControlLook.ToggleSwitch.ButtonBorderWidth = 1.000000000000000000
+              ControlLook.ToggleSwitch.CaptionFont.Charset = DEFAULT_CHARSET
+              ControlLook.ToggleSwitch.CaptionFont.Color = clWindowText
+              ControlLook.ToggleSwitch.CaptionFont.Height = -12
+              ControlLook.ToggleSwitch.CaptionFont.Name = 'Segoe UI'
+              ControlLook.ToggleSwitch.CaptionFont.Style = []
+              ControlLook.ToggleSwitch.Shadow = False
+              DefaultAlignment = taCenter
+              Filter = <>
+              FilterDropDown.Font.Charset = DEFAULT_CHARSET
+              FilterDropDown.Font.Color = clWindowText
+              FilterDropDown.Font.Height = -12
+              FilterDropDown.Font.Name = 'Segoe UI'
+              FilterDropDown.Font.Style = []
+              FilterDropDown.TextChecked = 'Checked'
+              FilterDropDown.TextUnChecked = 'Unchecked'
+              FilterDropDownClear = '(All)'
+              FilterEdit.TypeNames.Strings = (
+                'Starts with'
+                'Ends with'
+                'Contains'
+                'Not contains'
+                'Equal'
+                'Not equal'
+                'Larger than'
+                'Smaller than'
+                'Clear')
+              FixedColWidth = 40
+              FixedRowHeight = 22
+              FixedFont.Charset = DEFAULT_CHARSET
+              FixedFont.Color = clWindowText
+              FixedFont.Height = -11
+              FixedFont.Name = 'Segoe UI'
+              FixedFont.Style = [fsBold]
+              FloatFormat = '%.2f'
+              HoverButtons.Buttons = <>
+              HTMLSettings.ImageFolder = 'images'
+              HTMLSettings.ImageBaseName = 'img'
+              IntelliZoom = False
+              Look = glCustom
+              MouseActions.WheelActive = waMouseOver
+              PrintSettings.DateFormat = 'dd/mm/yyyy'
+              PrintSettings.Font.Charset = DEFAULT_CHARSET
+              PrintSettings.Font.Color = clWindowText
+              PrintSettings.Font.Height = -12
+              PrintSettings.Font.Name = 'Segoe UI'
+              PrintSettings.Font.Style = []
+              PrintSettings.FixedFont.Charset = DEFAULT_CHARSET
+              PrintSettings.FixedFont.Color = clWindowText
+              PrintSettings.FixedFont.Height = -12
+              PrintSettings.FixedFont.Name = 'Segoe UI'
+              PrintSettings.FixedFont.Style = []
+              PrintSettings.HeaderFont.Charset = DEFAULT_CHARSET
+              PrintSettings.HeaderFont.Color = clWindowText
+              PrintSettings.HeaderFont.Height = -12
+              PrintSettings.HeaderFont.Name = 'Segoe UI'
+              PrintSettings.HeaderFont.Style = []
+              PrintSettings.FooterFont.Charset = DEFAULT_CHARSET
+              PrintSettings.FooterFont.Color = clWindowText
+              PrintSettings.FooterFont.Height = -12
+              PrintSettings.FooterFont.Name = 'Segoe UI'
+              PrintSettings.FooterFont.Style = []
+              PrintSettings.PageNumSep = '/'
+              ScrollBarAlways = saVert
+              ScrollSynch = True
+              SearchFooter.ColorTo = clNone
+              SearchFooter.FindNextCaption = 'Find &next'
+              SearchFooter.FindPrevCaption = 'Find &previous'
+              SearchFooter.Font.Charset = DEFAULT_CHARSET
+              SearchFooter.Font.Color = clWindowText
+              SearchFooter.Font.Height = -12
+              SearchFooter.Font.Name = 'Segoe UI'
+              SearchFooter.Font.Style = []
+              SearchFooter.HighLightCaption = 'Highlight'
+              SearchFooter.HintClose = 'Close'
+              SearchFooter.HintFindNext = 'Find next occurrence'
+              SearchFooter.HintFindPrev = 'Find previous occurrence'
+              SearchFooter.HintHighlight = 'Highlight occurrences'
+              SearchFooter.MatchCaseCaption = 'Match case'
+              SearchFooter.ResultFormat = '(%d of %d)'
+              SelectionColor = 13744549
+              SelectionTextColor = clWindowText
+              ShowSelection = False
+              SortSettings.HeaderColor = clWhite
+              SortSettings.HeaderColorTo = clWhite
+              SortSettings.HeaderMirrorColor = clWhite
+              SortSettings.HeaderMirrorColorTo = clWhite
+              VAlignment = vtaCenter
+              Version = '9.0.0.10'
+              ColWidths = (
+                40
+                87
+                87
+                87
+                86
+                87
+                87
+                87
+                84)
+              RowHeights = (
+                22
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44
+                44)
+            end
+            object AdvToggleSwitch2: TAdvToggleSwitch
+              Left = 593
+              Top = 24
+              Width = 60
+              Height = 32
+              Animated = True
+              BackgroundBorderWidth = 1.000000000000000000
+              ButtonOnBorder = clBlack
+              ButtonOffBorder = clBlack
+              On = False
+              TabOrder = 2
+              Version = '1.0.0.1'
+              Visible = False
+            end
+          end
+          object Log_Send: TMemo
+            Left = 8
+            Top = 612
+            Width = 483
+            Height = 187
+            BevelInner = bvNone
+            BevelOuter = bvNone
+            BorderStyle = bsNone
+            Color = 2434341
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clCoral
+            Font.Height = -12
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Lines.Strings = (
+              'SEND MESSAGE')
+            ParentFont = False
+            ReadOnly = True
+            ScrollBars = ssVertical
+            TabOrder = 2
+          end
+          object memo: TMemo
+            Left = 497
+            Top = 612
+            Width = 645
+            Height = 187
+            BevelInner = bvNone
+            BevelOuter = bvNone
+            BorderStyle = bsNone
+            Color = 2434341
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clCoral
+            Font.Height = -12
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Lines.Strings = (
+              '[2024.07.18  PM 19:20:29 (333)]  Program Start')
+            ParentFont = False
+            ReadOnly = True
+            ScrollBars = ssVertical
+            TabOrder = 3
+          end
+          object Log_Recv: TMemo
+            Left = 1141
+            Top = 612
+            Width = 483
+            Height = 187
+            BevelInner = bvNone
+            BevelOuter = bvNone
+            BorderStyle = bsNone
+            Color = 2434341
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clCoral
+            Font.Height = -12
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Lines.Strings = (
+              'RECEIVED MESSAGE')
+            ParentFont = False
+            ReadOnly = True
+            ScrollBars = ssVertical
+            TabOrder = 4
+          end
         end
       end
     end
