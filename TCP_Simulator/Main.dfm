@@ -12,6 +12,7 @@ object FormMain: TFormMain
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnClose = FormClose
   TextHeight = 15
   object dxRibbon1: TdxRibbon
     Left = 0
@@ -30,6 +31,9 @@ object FormMain: TFormMain
       Groups = <
         item
           ToolbarName = 'BarMgrBar1'
+        end
+        item
+          ToolbarName = 'BarMgrBar2'
         end>
       Index = 0
     end
@@ -735,7 +739,7 @@ object FormMain: TFormMain
             ScrollBars = ssVertical
             TabOrder = 2
           end
-          object memo: TMemo
+          object memo_Client: TMemo
             Left = 497
             Top = 612
             Width = 645
@@ -749,8 +753,6 @@ object FormMain: TFormMain
             Font.Height = -12
             Font.Name = 'Segoe UI'
             Font.Style = []
-            Lines.Strings = (
-              '[2024.07.18  PM 19:20:29 (333)]  Program Start')
             ParentFont = False
             ReadOnly = True
             ScrollBars = ssVertical
@@ -798,7 +800,7 @@ object FormMain: TFormMain
     Left = 888
     PixelsPerInch = 96
     object BarMgrBar1: TdxBar
-      Caption = 'Custom 1'
+      Caption = 'Mode'
       CaptionButtons = <>
       DockedLeft = 0
       DockedTop = 0
@@ -814,6 +816,26 @@ object FormMain: TFormMain
         item
           Visible = True
           ItemName = 'MenuBtn_00_CLIENT'
+        end>
+      OneOnRow = True
+      Row = 1
+      UseOwnFont = False
+      Visible = True
+      WholeRow = False
+    end
+    object BarMgrBar2: TdxBar
+      Caption = 'Command'
+      CaptionButtons = <>
+      DockedLeft = 121
+      DockedTop = 0
+      FloatLeft = 1665
+      FloatTop = 2
+      FloatClientWidth = 0
+      FloatClientHeight = 0
+      ItemLinks = <
+        item
+          Visible = True
+          ItemName = 'dxBarLargeButton1'
         end>
       OneOnRow = True
       Row = 0
@@ -903,6 +925,12 @@ object FormMain: TFormMain
         69014E7FBD7BF146CC4DC3B3E76450A397B400D5CDD98BBD3774D43D7E4CA62F
         524DE8252D4085596B325EC9A36F864A6550734F4A5A80238667331933B30494
         7A535FC2D4DFF25480BF0001550276A15A27EB0000000049454E44AE426082}
+    end
+    object dxBarLargeButton1: TdxBarLargeButton
+      Caption = 'New Button'
+      Category = 0
+      Hint = 'New Button'
+      Visible = ivAlways
     end
   end
 end

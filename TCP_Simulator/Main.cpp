@@ -86,13 +86,47 @@ TFormMain *FormMain;
 __fastcall TFormMain::TFormMain(TComponent* Owner)
 	: TForm(Owner)
 {
+	InitProgram();
 }
 //---------------------------------------------------------------------------
+
+void __fastcall TFormMain::InitProgram() {
+
+	// DEFAULT NOTEBOOK PAGE SETTING
+	Notebook_Main->PageIndex = 0; // SERVER
+
+	PrintMsg(L"Init Complete");
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::FormClose(TObject *Sender, TCloseAction &Action)
+{
+	ExitProgram();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::ExitProgram() {
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::PrintMsg(UnicodeString _str) {
+    UnicodeString tempStr = L"";
+	TDateTime t_DateTime = Now();
+	tempStr = t_DateTime.FormatString(L"[yyyy.mm.dd hh:nn:ss'zzz]  ");
+	tempStr += _str;
+	memo_Client->Lines->Add(tempStr);
+}
+//---------------------------------------------------------------------------
+
+
 void __fastcall TFormMain::ClickMenuButton(TObject *Sender)
 {
 	TdxBarLargeButton* p_Btn = (TdxBarLargeButton*)Sender;
 	int t_Tag = p_Btn->Tag;
 
-    Notebook_Main->PageIndex = t_Tag;
+	Notebook_Main->PageIndex = t_Tag;
 }
 //---------------------------------------------------------------------------
+
+

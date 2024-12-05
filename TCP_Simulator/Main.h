@@ -117,12 +117,23 @@ __published:	// IDE-managed Components
 	TAdvStringGrid *grid_Recv_Protocol;
 	TAdvToggleSwitch *AdvToggleSwitch2;
 	TMemo *Log_Send;
-	TMemo *memo;
+	TMemo *memo_Client;
 	TMemo *Log_Recv;
+	TdxBar *BarMgrBar2;
+	TdxBarLargeButton *dxBarLargeButton1;
 	void __fastcall ClickMenuButton(TObject *Sender);
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormMain(TComponent* Owner);
+
+public: // DEFAULT MEMBER FUNCTIONS
+	void __fastcall InitProgram();
+	void __fastcall ExitProgram();
+	void __fastcall PrintMsg(UnicodeString _str);
+
+
+
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFormMain *FormMain;
