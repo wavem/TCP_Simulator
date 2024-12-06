@@ -182,6 +182,10 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="Define.cpp">
+            <DependentOn>Define.h</DependentOn>
+            <BuildOrder>3</BuildOrder>
+        </CppCompile>
         <CppCompile Include="Main.cpp">
             <Form>FormMain</Form>
             <FormType>dfm</FormType>

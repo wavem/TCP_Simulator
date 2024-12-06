@@ -3,6 +3,7 @@
 #ifndef MainH
 #define MainH
 //---------------------------------------------------------------------------
+#include "Define.h"
 #include "libxl.h"
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
@@ -131,6 +132,15 @@ public: // DEFAULT MEMBER FUNCTIONS
 	void __fastcall InitProgram();
 	void __fastcall ExitProgram();
 	void __fastcall PrintMsg(UnicodeString _str);
+	void __fastcall PrintSendLog(UnicodeString _str);
+	void __fastcall PrintRecvLog(UnicodeString _str);
+
+public: // LIBXL
+	libxl::Book* m_Book;
+	bool __fastcall InitLibxl();
+	bool __fastcall LoadConfigFile();
+	bool __fastcall LoadProtocolList();
+	bool __fastcall LoadProtocol(int _Index, UnicodeString _Name, int _Size, int _Type);
 
 
 

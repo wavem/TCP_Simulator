@@ -81,6 +81,7 @@
 #pragma link "BaseGrid"
 #pragma link "cxButtons"
 #pragma resource "*.dfm"
+#pragma link "libxl32.lib"
 TFormMain *FormMain;
 //---------------------------------------------------------------------------
 __fastcall TFormMain::TFormMain(TComponent* Owner)
@@ -94,6 +95,17 @@ void __fastcall TFormMain::InitProgram() {
 
 	// DEFAULT NOTEBOOK PAGE SETTING
 	Notebook_Main->PageIndex = 0; // SERVER
+
+
+
+	// INIT LIBXL
+	if(InitLibxl()) {
+		if(LoadConfigFile() == false) {
+			PrintMsg(L"Fail to Load Config File");
+			return;
+		}
+	}
+
 
 	PrintMsg(L"Init Complete");
 }
@@ -126,6 +138,56 @@ void __fastcall TFormMain::ClickMenuButton(TObject *Sender)
 	int t_Tag = p_Btn->Tag;
 
 	Notebook_Main->PageIndex = t_Tag;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::PrintSendLog(UnicodeString _str) {
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::PrintRecvLog(UnicodeString _str) {
+
+}
+//---------------------------------------------------------------------------
+
+bool __fastcall TFormMain::InitLibxl() {
+    m_Book = xlCreateXMLBook();
+	if(m_Book) {
+		m_Book->setKey(L"ÁØÈ£ ¾ç", L"windows-2d20200d03c0ed046aba6867a7o0n2j0");
+		PrintMsg(L"Libxl Init Complete");
+		return true;
+	}
+	return false;
+}
+//---------------------------------------------------------------------------
+
+bool __fastcall TFormMain::LoadConfigFile() {
+
+    // LOAD CONFIG FILE
+	if(m_Book->load(CONFIG_FILE_PATH)) {
+
+		// LOAD PROTOCOL LIST
+		if(LoadProtocolList() == false) {
+			PrintMsg(L"Fail to Load Protocol List Sheet");
+			return false;
+		}
+	}
+
+	PrintMsg(L"Load Complete Config File");
+	return true;
+}
+//---------------------------------------------------------------------------
+
+bool __fastcall TFormMain::LoadProtocolList() {
+
+	return true;
+}
+//---------------------------------------------------------------------------
+
+bool __fastcall TFormMain::LoadProtocol(int _Index, UnicodeString _Name, int _Size, int _Type) {
+
+    return true;
 }
 //---------------------------------------------------------------------------
 
