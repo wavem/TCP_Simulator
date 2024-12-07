@@ -139,8 +139,21 @@ public: // LIBXL
 	libxl::Book* m_Book;
 	bool __fastcall InitLibxl();
 	bool __fastcall LoadConfigFile();
-	bool __fastcall LoadProtocolList();
 	bool __fastcall LoadProtocol(int _Index, UnicodeString _Name, int _Size, int _Type);
+
+public: // PROTOCOL
+	int m_SendProtocolIndexCurrentSelected = -1;
+	int m_RecvProtocolIndexCurrentSelected = -1;
+	CLS_PROTOCOL* m_Send_Protocol = NULL;
+	CLS_PROTOCOL* m_Recv_Protocol = NULL;
+	UINT32 m_SendProtocolCount = 0;
+	UINT32 m_RecvProtocolCount = 0;
+	UINT32 __fastcall GetProtocolCountFromGrid(TAdvStringGrid* _pGrid);
+	bool __fastcall CreateProtocol();
+	void __fastcall RefreshProtocolGrid(int _Type);
+	UnicodeString ExtractOriginSignalName(UnicodeString _str);
+	UnicodeString __fastcall MakingParsingInfoID(UnicodeString _CarName, UnicodeString _SheetName, int _ByteOffset, int _BitOffset, int _BitSize);
+	UnicodeString __fastcall GetRTimeValueStr(UnicodeString _ID, BYTE* _pBuffer, int _ByteOffset, int _Size, int _BitIdx = 0);
 
 
 
