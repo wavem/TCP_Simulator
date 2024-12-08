@@ -107,6 +107,9 @@ void __fastcall TFormMain::InitProgram() {
 			PrintMsg(L"Fail to Load Config File");
 			return;
 		}
+
+		LoadProtocol(0, L"R_0x20", 33, TYPE_SEND);
+		LoadProtocol(1, L"R_0x20", 33, TYPE_RECV);
 	}
 
 
@@ -266,7 +269,7 @@ bool __fastcall TFormMain::LoadProtocol(int _Index, UnicodeString _Name, int _Si
 		m_SendProtocolIndexCurrentSelected = _Index;
 		tempStr.sprintf(L"%s (%d BYTE)", _Name.c_str(), _Size);
 		lb_Send_ProtocolName->Caption = tempStr;
-		Toggle_Send_Auto->On = m_Send_Protocol[_Index].AutoSendOn;
+		//Toggle_Send_Auto->On = m_Send_Protocol[_Index].AutoSendOn;
 	} else if(_Type == TYPE_RECV) {
 		m_RecvProtocolIndexCurrentSelected = _Index;
 		tempStr.sprintf(L"%s (%d BYTE)", _Name.c_str(), _Size);
