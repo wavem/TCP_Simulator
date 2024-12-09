@@ -100,6 +100,8 @@ void __fastcall TFormMain::InitProgram() {
 	Notebook_Main->PageIndex = 0; // SERVER
 
 
+	// SOCKET INIT
+
 
 	// INIT LIBXL
 	if(InitLibxl()) {
@@ -279,6 +281,24 @@ bool __fastcall TFormMain::LoadProtocol(int _Index, UnicodeString _Name, int _Si
 
 
 	return true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::PrintThreadLogMessage(TMessage &_msg) {
+    unsigned int t_wParam = _msg.WParam;
+	int t_lParam = _msg.LParam;
+
+	UnicodeString tempStr = L"";
+	UnicodeString *p = NULL;
+	p = (UnicodeString*)t_wParam;
+	tempStr = *p;
+	PrintMsg(tempStr);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormMain::ReceiveServerData(TMessage &_msg) {
+
+
 }
 //---------------------------------------------------------------------------
 

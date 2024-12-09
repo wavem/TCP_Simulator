@@ -24,7 +24,6 @@ object FormMain: TFormMain
     Contexts = <>
     TabOrder = 0
     TabStop = False
-    ExplicitWidth = 1402
     object dxRibbon1Tab1: TdxRibbonTab
       Active = True
       Caption = 'MENU'
@@ -47,9 +46,7 @@ object FormMain: TFormMain
     BevelOuter = bvNone
     Color = 3947580
     ParentBackground = False
-    TabOrder = 5
-    ExplicitWidth = 1402
-    ExplicitHeight = 830
+    TabOrder = 1
     object Notebook_Main: TNotebook
       Left = 0
       Top = 0
@@ -58,8 +55,6 @@ object FormMain: TFormMain
       Align = alClient
       PageIndex = 1
       TabOrder = 0
-      ExplicitWidth = 1402
-      ExplicitHeight = 830
       object TPage
         Left = 0
         Top = 0
@@ -85,8 +80,6 @@ object FormMain: TFormMain
         Top = 0
         HelpContext = 1
         Caption = 'CLIENT'
-        ExplicitWidth = 1402
-        ExplicitHeight = 830
         object _____pnBase_01_CLIENT: TPanel
           Left = 0
           Top = 0
@@ -97,8 +90,6 @@ object FormMain: TFormMain
           Color = 3947580
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 1402
-          ExplicitHeight = 830
           object __pnBase_Send_01_Content: TPanel
             Left = 8
             Top = 6
@@ -199,8 +190,6 @@ object FormMain: TFormMain
               ParentFont = False
               TabOrder = 1
               ActiveRowColor = 4429536
-              GridLineColor = 13948116
-              GridFixedLineColor = 11250603
               ActiveCellFont.Charset = DEFAULT_CHARSET
               ActiveCellFont.Color = 4474440
               ActiveCellFont.Height = -12
@@ -524,8 +513,6 @@ object FormMain: TFormMain
               ParentFont = False
               TabOrder = 1
               ActiveRowColor = 4429536
-              GridLineColor = 13948116
-              GridFixedLineColor = 11250603
               ActiveCellFont.Charset = DEFAULT_CHARSET
               ActiveCellFont.Color = 4474440
               ActiveCellFont.Height = -12
@@ -817,8 +804,8 @@ object FormMain: TFormMain
           Visible = True
           ItemName = 'MenuBtn_00_CLIENT'
         end>
-      OneOnRow = True
-      Row = 1
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -837,7 +824,7 @@ object FormMain: TFormMain
           Visible = True
           ItemName = 'dxBarLargeButton1'
         end>
-      OneOnRow = True
+      OneOnRow = False
       Row = 0
       UseOwnFont = False
       Visible = True

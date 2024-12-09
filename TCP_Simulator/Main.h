@@ -5,6 +5,7 @@
 //---------------------------------------------------------------------------
 #include "Define.h"
 #include "libxl.h"
+#include "TcpSocketThread.h"
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
@@ -89,6 +90,8 @@
 #include <Vcl.Grids.hpp>
 #include <Vcl.Menus.hpp>
 //---------------------------------------------------------------------------
+class CTcpSocketThread;
+
 class TFormMain : public TForm
 {
 __published:	// IDE-managed Components
@@ -155,8 +158,19 @@ public: // PROTOCOL
 	UnicodeString __fastcall MakingParsingInfoID(UnicodeString _CarName, UnicodeString _SheetName, int _ByteOffset, int _BitOffset, int _BitSize);
 	UnicodeString __fastcall GetRTimeValueStr(UnicodeString _ID, BYTE* _pBuffer, int _ByteOffset, int _Size, int _BitIdx = 0);
 
+public: // SOCKET
+    SOCKET m_sock_Client = INVALID_SOCKET;
+	CTcpSocketThread* m_ClientThread = NULL;
 
 
+public: // MSG HANDLER
+	void __fastcall PrintThreadLogMessage(TMessage &_msg);
+	void __fastcall ReceiveServerData(TMessage &_msg);
+
+BEGIN_MESSAGE_MAP
+	MESSAGE_HANDLER(MSG_LOG_FROM_THREAD, TMessage, PrintThreadLogMessage)
+	MESSAGE_HANDLER(MSG_SERVER_DATA, TMessage, ReceiveServerData)
+END_MESSAGE_MAP(TForm)
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFormMain *FormMain;

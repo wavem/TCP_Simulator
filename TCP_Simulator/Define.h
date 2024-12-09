@@ -16,12 +16,19 @@
 #define UDP_SEND_BUF_SIZE	65536
 #define UDP_RECV_BUF_SIZE	65536
 
+#define TCP_SEND_BUF_SIZE   65536
+#define TCP_RECV_BUF_SIZE   65536
+
 #define COLOR_GRID_SIGNAL_OFF	0x3C3C3C
 #define COLOR_GRID_SIGNAL_ON    0x207DBB
 
+// COMM
+#define IP_SERVER "10.128.9.200"
+#define TCP_SERVER_PORT 6001
 
 // MESSAGE MAP
 #define MSG_LOG_FROM_THREAD     33000
+#define MSG_SERVER_DATA			40002
 
 
 
@@ -49,6 +56,12 @@ public:
     bool AutoRepeatOn;
 };
 
+// Received Packet Struct From Server
+typedef struct ST_SERVERDATA {
+	BYTE Data[TCP_RECV_BUF_SIZE];
+} SERVERDATA;
+
 
 //---------------------------------------------------------------------------
 #endif
+

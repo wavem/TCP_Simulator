@@ -204,6 +204,10 @@
             <DependentOn>SocketUtil.h</DependentOn>
             <BuildOrder>6</BuildOrder>
         </CppCompile>
+        <CppCompile Include="TcpSocketThread.cpp">
+            <DependentOn>TcpSocketThread.h</DependentOn>
+            <BuildOrder>7</BuildOrder>
+        </CppCompile>
         <CppCompile Include="TCP_Simulator.cpp">
             <BuildOrder>0</BuildOrder>
         </CppCompile>
