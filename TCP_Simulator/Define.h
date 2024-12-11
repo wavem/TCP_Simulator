@@ -4,7 +4,7 @@
 #define DefineH
 //---------------------------------------------------------------------------
 #define SW_VERSION  L"(Ver 0.0.1)"
-#define SW_UPDATE_DATE  L"2024. 12. 06  PM 12:18"
+#define SW_UPDATE_DATE  L"2024. 12. 11  PM 14:43"
 
 #define CONFIG_FILE_PATH    L".\\Config\\Config.xlsx"
 

@@ -96,11 +96,32 @@ __fastcall TFormMain::TFormMain(TComponent* Owner)
 
 void __fastcall TFormMain::InitProgram() {
 
+	// COMMON
+    UnicodeString tempStr = L"";
+
 	// DEFAULT NOTEBOOK PAGE SETTING
 	Notebook_Main->PageIndex = 0; // SERVER
 
 
 	// SOCKET INIT
+	WSADATA data;
+	WORD version;
+	int ret = 0;
+
+	version = MAKEWORD(2, 2);
+	ret = WSAStartup(version, &data);
+	if(ret != 0) {
+		ret = WSAGetLastError();
+		if(ret == WSANOTINITIALISED) {
+			tempStr.sprintf(L"Socket not initialised (error code : %d)", ret);
+			PrintMsg(tempStr);
+		} else {
+			tempStr.sprintf(L"Socket error (error code : %d)", ret);
+			PrintMsg(tempStr);
+		}
+	} else {
+		PrintMsg(L"Socket init success");
+	}
 
 
 	// INIT LIBXL

@@ -69,7 +69,7 @@ void __fastcall CTcpSocketThread::Execute() {
             t_Str = L"Error String : ";
             t_Str += t_AnsiStr;
             SendMessage(FormMain->Handle, MSG_LOG_FROM_THREAD, (unsigned int)&t_Str, 0x10);
-            m_eThreadWork == THREAD_TERMINATED;
+            m_eThreadWork = THREAD_TERMINATED;
             t_ConnectTryingCount++;
             continue;
          } else {
